@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerenciamento de Animais</title>
+  <link rel="stylesheet" href="/Client/css/styles.css">
+</head>
+<body>
+  <h1>Gerenciamento de Animais</h1>
+  <form id="animalForm">
+    <input type="text" id="nomeAnimal" placeholder="Nome do Animal" required>
+    <input type="number" id="idadeAnimal" placeholder="Idade" required>
+    <input type="text" id="tipoAnimal" placeholder="Tipo" required>
+    <input type="number" id="idDonoAnimal" placeholder="ID do dono do animal"></input>
+    <button type="submit">Adicionar Animal</button>
+  </form>
+
+  <h2>Lista de Animais</h2>
+  <ul id="listaAnimais"></ul>
+
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close" class="close-btn" onclick="fecharModal()">&times;</span>
+      <h2>Editar Animal</h2>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome">
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade">
+      <label for="tipo">Tipo:</label>
+      <input type="text" id="tipo">
+      <button type="button" id="editarBtn">Salvar</button>
+      <button id="excluirBtn" onclick="excluirAnimal()">Excluir</button>
+    </div>
+  </div>
+
+  <script src="/Client/JS/scriptAnimais.js"></script>
+</body>
+</html>

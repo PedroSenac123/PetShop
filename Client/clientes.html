@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerenciamento de Clientes</title>
+  <link rel="stylesheet" href="/Client/css/styles.css">
+</head>
+<body>
+  <h1>Gerenciamento de Clientes</h1> 
+  <form id="clienteForm">
+    <input type="text" id="nomeCliente" placeholder="Nome do Cliente" required>
+    <input type="text" id="telefoneCliente" placeholder="Telefone" required>
+    <input type="text" id="enderecoCliente" placeholder="Endereço" required>
+    <button type="submit" onclick="adicionarCliente(event)">Adicionar Cliente</button>
+  </form>
+  <button onclick="irParaPaginaAnimais()">Gerenciar Animais</button>
+
+  <h2>Lista de Clientes</h2>
+  <ul id="listaClientes"></ul>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close" class="close-btn">&times;</span>
+    <h2>Editar Cliente</h2>
+    <form id="formEditCliente">
+      <input type="hidden" id="idClienteEdit">
+      <input type="text" id="nomeClienteEdit" placeholder="Nome" required />
+      <input type="text" id="telefoneClienteEdit" placeholder="Telefone" required />
+      <input type="text" id="enderecoClienteEdit" placeholder="Endereço" required />
+      <button type="submit">Salvar</button>
+    </form>
+    <button id="excluirClienteBtn" onclick="excluirCliente()">Excluir Cliente</button>
+  </div>
+</div>
+
+
+  <script src="/Client/JS/script.js"></script>
+</body>
+</html>
